@@ -9,7 +9,7 @@ theme = "hugo.386k"
 
 [params]
     mainpagetitle = "일기 BBS"
-    mainpagesubtitle = "일기장 게시판"
+    mainpagesubtitle = "주로 자기 계발 활동에 대한 일기"
     showhugo = true
     loadonepass = true
 
