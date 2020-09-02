@@ -1,6 +1,6 @@
 baseURL = "https://diary.benelog.net/"
 languageCode = "ko-kr"
-title = "일기장"
+title = "diary.benelog.net"
 theme = "hugo.386k"
 
 [taxonomies]
