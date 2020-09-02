@@ -2,7 +2,6 @@
 title: "사이트 설명"
 description: "이 사이트에서 사용된 기술들"
 aliases: ["contact"]
-author: "Hugo Authors"
 date: 2020-09-03T06:20:08+09:00
 ---
 
@@ -10,6 +9,7 @@ date: 2020-09-03T06:20:08+09:00
 
 * 테마 : https://github.com/honux77/hugo.386k
     * 폰트 : 동근모꼴 (https://cactus.tistory.com/193)
+* 컨텐츠 작성 : https://forestry.io/ 
 * 배포 : https://www.netlify.com/
 
 이 사이트의 소스는 https://github.com/benelog/diary 에 있습니다.
