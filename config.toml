@@ -1,0 +1,17 @@
+baseURL = "https://diary.benelog.net/"
+languageCode = "ko-kr"
+title = "일기장"
+theme = "hugo.386k"
+
+[taxonomies]
+   tag = "tags"
+   categories = "categories"
+
+[params]
+    mainpagetitle = "일기 BBS"
+    mainpagesubtitle = "일기장 게시판"
+    showhugo = true
+    loadonepass = true
+
+[permalinks]
+  post = "/:filename/"
