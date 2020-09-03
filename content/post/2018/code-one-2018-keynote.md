@@ -6,7 +6,7 @@ categories: ["2018년"]
 tags: ["영어-공부"]
 ---
 
-Code one 2018의 키노트 중에서는 Github의 Matthew McCullough의 발표가 가장 인상 깊었다. 빌 클린턴 같은 사람이 연설하는 느낌이였다.
+Code one 2018의 키노트 중에서는 GitHub의 Matthew McCullough의 발표가 가장 인상 깊었다. 빌 클린턴 같은 사람이 연설하는 느낌이였다.
 
 https://www.youtube.com/watch?v=nKJbDYRsO0s&t=520s
 
@@ -14,9 +14,9 @@ https://www.youtube.com/watch?v=nKJbDYRsO0s&t=520s
 
 하나의 버그픽스, 하나의 기능추가, 한번의 릴리즈가 간절했던 기억이 떠올랐다.
 
-감명깊어서 받아쓰기를 하다가, Youtube의 자동자막이 내가 적은 것보다 더 정확해보여서 중간부터 그냥 옮겨적었다;
+감명깊어서 받아쓰기를 하다가, YouTube의 자동자막이 내가 적은 것보다 더 정확해보여서 중간부터 그냥 옮겨적었다;
 
-> Software project of a significant scale are built by a community. And I gonna share some relevant Github data and together explore what you can do to grow and strengthen your own project's community.
+> Software projects of significant scale are built by a community. And I gonna share some relevant GitHub data and together explore what you can do to grow and strengthen your own project's community.
 
 > So let's talk about what we found to a the magic number. With all the industry talk about big data, this may be shock you, One. Not forty-two, one.
 
