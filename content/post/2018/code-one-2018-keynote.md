@@ -1,6 +1,6 @@
 ---
-title: "2018년 10월 30일"
-description: "Code One 2018 키노트"
+title: "Code One 2018 키노트"
+description: "Magic number"
 date: 2018-10-30
 categories: ["2018년"]
 tags: ["영어-공부"]
