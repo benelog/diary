@@ -3,7 +3,7 @@ title: "Code One 2018 키노트"
 description: "Magic number"
 date: 2018-10-30
 categories: ["2018년"]
-tags: ["영어-공부"]
+tags: ["영어"]
 ---
 
 Code one 2018의 키노트 중에서는 GitHub의 Matthew McCullough의 발표가 가장 인상 깊었다. 빌 클린턴 같은 사람이 연설하는 느낌이였다.

@@ -3,7 +3,7 @@ title: "Electrcity"
 description: "노래 가사"
 date: 2013-11-25
 categories: ["2013년"]
-tags: ["영어-공부"]
+tags: ["영어"]
 ---
 
 받아쓰기 해봄.

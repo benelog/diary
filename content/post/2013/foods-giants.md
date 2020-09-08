@@ -3,7 +3,7 @@ title: "Foods giants have your number"
 description: "회사 영어 수업"
 date: 2013-04-09
 categories: ["2013년"]
-tags: ["영어-공부"]
+tags: ["영어"]
 ---
 
 ### 배운 단어
