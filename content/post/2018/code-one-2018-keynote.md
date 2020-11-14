@@ -8,6 +8,8 @@ tags: ["영어"]
 
 Code one 2018의 키노트 중에서는 GitHub의 Matthew McCullough의 발표가 가장 인상 깊었다. 빌 클린턴 같은 사람이 연설하는 느낌이였다.
 
+{{<youtube nKJbDYRsO0s>}}
+
 https://www.youtube.com/watch?v=nKJbDYRsO0s&t=520s
 
 커뮤니티를 성장시키는 Magic number는 1.
