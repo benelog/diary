@@ -3,7 +3,7 @@ title: "체력을 키워야 하는 가장 중요한 이유"
 description: "'건강과 운동은 과학이다' 채널의 동영상"
 date: 2020-11-14
 categories: ["2020년"]
-tags: ["동영상"]
+tags: ["동영상", "건강"]
 ---
 
 {{< youtube DQq29ctYCwI >}}

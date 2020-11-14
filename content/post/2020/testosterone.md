@@ -3,7 +3,7 @@ title: "상위 1% 남성 호르몬의 비밀"
 description: "'유튜브 읽어주는 남자' 채널의 동영상"
 date: 2020-11-14
 categories: ["2020년"]
-tags: ["동영상"]
+tags: ["동영상", "건강"]
 ---
 
 {{< youtube ndhQctl1yN8 >}}
