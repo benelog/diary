@@ -23,7 +23,12 @@ theme = "hugo.386k"
     name = "소개"       # A display name for the button
     url = "/about/"      # The path to the content. It can lead to a single page (like here)
     weight = 10          # A number to order the buttons in the navbar
-    [[menu.main]]
+  [[menu.main]]
+    identifier = "motivation"
+    name = "동기유발"
+    url = "/motivation/"
+    weight = 15
+  [[menu.main]]
     identifier = "posts"
     name = "모든 글"
     url = "/post/"       # The path can lead to a content folder too.
