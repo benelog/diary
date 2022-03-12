@@ -14,7 +14,7 @@ theme = "hugo.386k"
     loadonepass = true
 
 [permalinks]
-  post = "/:filename/"
+  post = ":year/:filename/"
 
 [menu]
   # This displays buttons in the navbar to access your contents
