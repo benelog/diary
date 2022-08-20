@@ -32,7 +32,7 @@ tags: ["영화"]
 ### It's time to let go.
 탑건 1편에서 사고현장에서 구스를 붙잡고 놓지 못하는 매버릭에게 구조대원이 하는 대사가 'Sir, let go of him. You've got to let him go, sir.' 였다는 것을 얼마전에 알게 되었다.
 
-### Naval aviator is not what I am. It's who I am.
+### Naval aviator. It’s not what I am, it’s who I am.
 이 대사를 3번째 듣고 나니 매버릭이 왜 오래된 비행기를 보유하고 있는지 더 이해가 되었다.
 은퇴해도 취미로 개발할 거라고 말하는 개발자와 비슷한 느낌이다.
 "Programmer is not what I am. It's who I am." 이라고도 누군가가 이력서에 쓸만하다.
