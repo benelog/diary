@@ -2,6 +2,7 @@
 title: "먼저 온 미래"
 date: 2025-08-07T08:20:08+09:00
 categories: ["2025년"]
+description: "독서 감상문"
 tags: ["독서"]
 ---
 

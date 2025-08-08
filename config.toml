@@ -33,3 +33,7 @@ theme = "hugo.386k"
     name = "모든 글"
     url = "/post/"       # The path can lead to a content folder too.
     weight = 20
+  [[menu.main]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 30
