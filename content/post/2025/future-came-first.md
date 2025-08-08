@@ -156,23 +156,25 @@ AI는 단순한 기술이 아닌 새로운 사상이 필요한 변화라는 생�
 
 이 책은 아래에서 구매가능 합니다.
 
-- 종이책 : [https://www.yes24.com/product/goods/148032297](<https://www.yes24.com/product/goods/148032297>)
-- 전자책 : [https://play.google.com/store/books/details?id=xC5oEQAAQBAJ](<https://play.google.com/store/books/details?id=xC5oEQAAQBAJ>)
+* 종이책 : [https://www.yes24.com/product/goods/148032297](<https://www.yes24.com/product/goods/148032297>)
+* 전자책 : [https://play.google.com/store/books/details?id=xC5oEQAAQBAJ](<https://play.google.com/store/books/details?id=xC5oEQAAQBAJ>)
 
 책에 있는 내용 외에도 이 글에서 짧게 언급된 다른 주제들이 더 궁금하신 분은 아래의 기사나 책을 참고하시기 바랍니다.
 
 * 한국 프로야구의 스트라이크 판정에 AI 도입
-  * [‘선수들 이름값 모르는 ABS’, ‘영건’들 약진](<https://m.sports.naver.com/kbaseball/article/056/0011722655>)(KBS NEWS, 2024-05-16)
-  * [로봇 심판이 만든 '공정 야구'](<https://n.news.naver.com/mnews/article/353/0000049207?sid=110>)(중앙 SUNDAY, 2024-09-21)
-  * [전격 도입 ABS, 고참 타자들은 고전하고 젊은 타자는 덕봤다](<https://m.sports.naver.com/kbaseball/article/023/0003875950>)(조선일보, 2024-12-12)
+    * [‘선수들 이름값 모르는 ABS’, ‘영건’들 약진](<https://m.sports.naver.com/kbaseball/article/056/0011722655>)(KBS NEWS, 2024-05-16)
+    * [로봇 심판이 만든 '공정 야구'](<https://n.news.naver.com/mnews/article/353/0000049207?sid=110>)(중앙 SUNDAY, 2024-09-21)
+    * [전격 도입 ABS, 고참 타자들은 고전하고 젊은 타자는 덕봤다](<https://m.sports.naver.com/kbaseball/article/023/0003875950>)(조선일보, 2024-12-12)
 * AI를 이용한 면접 치팅
-  * [아마존도 '극대노'한 한인 학생 정체..."빅테크 다 뚫었다"](<https://www.youtube.com/watch?v=MFnoFqtAfAE>)( MBC AMERICA NEWS, 2025-04-11)
+    * [아마존도 '극대노'한 한인 학생 정체..."빅테크 다 뚫었다"](<https://www.youtube.com/watch?v=MFnoFqtAfAE>)( MBC AMERICA NEWS, 2025-04-11)
 * Brain Computer Interface
-  * (책) [뉴럴 링크](<https://www.yes24.com/product/goods/124422723>)(임창환 저, 동아시아, 2024)
-  * ["뇌파로 의사소통"…한양대, 환자 대상 연구서 가능성 확인](<https://n.news.naver.com/mnews/article/001/0010621031?sid=105>)(연합뉴스, 2019-02-07) \*[뇌-컴퓨터 인터페이스 투자에 바쁜 실리콘밸리](<https://n.news.naver.com/mnews/article/053/0000027927?sid=110>)(주간조선 2020-09-08) - [뉴럴링크 "2031년에 연간 2만 명에 칩 이식"](<https://n.news.naver.com/mnews/article/052/0002223824?sid=104>)(YTN, 2025-07-24)
-  * [20년 전신마비 여성도 컴퓨터 조작…'머스크 칩' 영국서 임상실험](<https://n.news.naver.com/mnews/article/015/0005165583?sid=102>)(한국경제, 2025-08-01)
+    * (책) [뉴럴 링크](<https://www.yes24.com/product/goods/124422723>)(임창환 저, 동아시아, 2024)
+    * ["뇌파로 의사소통"…한양대, 환자 대상 연구서 가능성 확인](<https://n.news.naver.com/mnews/article/001/0010621031?sid=105>)(연합뉴스, 2019-02-07)
+    * [뇌-컴퓨터 인터페이스 투자에 바쁜 실리콘밸리](<https://n.news.naver.com/mnews/article/053/0000027927?sid=110>)(주간조선 2020-09-08)
+    * [뉴럴링크 "2031년에 연간 2만 명에 칩 이식"](<https://n.news.naver.com/mnews/article/052/0002223824?sid=104>)(YTN, 2025-07-24)
+    * [20년 전신마비 여성도 컴퓨터 조작…'머스크 칩' 영국서 임상실험](<https://n.news.naver.com/mnews/article/015/0005165583?sid=102>)(한국경제, 2025-08-01)
 * 마인드 업로딩
-  * (책) [마인드 업로딩은 가능한가](<https://play.google.com/store/books/details?id=bIYxDwAAQBAJ>)- 한국 스켑틱 Skeptic 2016 Vol.7
+    * (책) [마인드 업로딩은 가능한가](<https://play.google.com/store/books/details?id=bIYxDwAAQBAJ>)- 한국 스켑틱 Skeptic 2016 Vol.7
 
 -------
 
