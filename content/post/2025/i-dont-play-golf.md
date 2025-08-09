@@ -32,6 +32,6 @@ categories: ["2025년"]
 
 골프 등의 인맥유지를 위한 활동은 과대평가나 합리화되기 쉽다고도 생각합니다. 관련된 동영상으로 아래 링크를 걸어봅니다.
 
-{{< youtube WqTa6JZVQ5U >}}
+Naval Ravikant: “Networking is overrated… Do something great and your network will instantly emerge"
 
-Naval Ravikant: “Networking is overrated… Do something great and your network will instantly emerge" :
+{{< youtube WqTa6JZVQ5U >}}
