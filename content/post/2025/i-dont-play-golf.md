@@ -30,7 +30,7 @@ categories: ["2025년"]
 그러나 골프가 이를 유한 유일한 수단이 아니라고 생각합니다.
 제가 먼저 식사 자리를 제안드리고, 책이나 영화 등 다른 이야기거리도 만드는 노력도 하고 있습니다.
 
-골프 등의 인맥과 유대감을 위한 활동은 과대평가되기도 합니다.
+골프를 포함하여 인맥 연결과 유대감을 위한 활동은 과대평가되기도 합니다.
 실리콘밸리의 유명한 투자자인 Naval Ravikant가 이에 대해서 언급한 동영상을 공유드립니다.
 
 Naval Ravikant: “Networking is overrated. Do something great and your network will instantly emerge"
