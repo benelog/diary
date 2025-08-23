@@ -1,6 +1,6 @@
 ---
 title: "'내 이름 맑음'을 듣다가"
-description: "asdf을 설치하다가 QWER 노래를 듣고 하게된 단어 선택에 대한 고민"
+description: "QWER 노래를 듣고 단어 선택에 대해서 해본 생각"
 date: 2024-11-10
 categories: ["2024년"]
 ---
@@ -31,3 +31,7 @@ categories: ["2024년"]
 
 메모리나 버그까지 우리말로 바꿀 이유는 없다.
 '기억공간'보다는 이 맥락에서는 '메모리'가 더 오해의 소지가 없고 구체적이기 때문이다. 메모리는 생각해보니 'RAM'으로 적어야 더 정확하겠다.
+
+----
+
+https://www.facebook.com/benelog/posts/pfbid0CHZyG9XudEDa9RTxJhw5WdN4DiegpaANKTJSx7DZWWbTVnC6egh1gcAKcRTHuKPXl
