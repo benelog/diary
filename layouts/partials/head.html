@@ -9,7 +9,9 @@
     <link rel="canonical" href="{{ .Permalink }}">
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
     <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}" />
+    {{ with .Params.image }}<meta property="og:image" content="{{ . }}" />{{ end }}
     {{/* Don't ask why it's like this. This original theme is a mess... */}}
     <!-- <noscript><style>body { visibility: visible }</style></noscript> -->
 </head>
