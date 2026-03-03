@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#000084" />
-    <link rel="icon" href="{{ .Site.BaseURL }}/favicon.ico">
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}">
     <link rel="canonical" href="{{ .Permalink }}">
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
