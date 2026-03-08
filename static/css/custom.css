@@ -13,4 +13,5 @@ dt {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  filter: contrast(1000%);
 }
