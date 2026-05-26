@@ -7,7 +7,7 @@
     <main class="wrap">
       {{- block "main" . }}{{- end }}
     </main>
-    {{- partial "footer.html" . -}}
+    {{- if not .Params.hideFooter }}{{- partial "footer.html" . -}}{{- end }}
     {{- partial "scripts.html" . -}}
   </body>
 </html>

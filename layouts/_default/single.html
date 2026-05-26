@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="post">
   <p class="post__back latin"><a href="{{ .Site.BaseURL }}">← 처음으로</a></p>
-  {{ if not .Date.IsZero }}{{ partial "post-meta.html" . }}{{ end }}
+  {{ if and (not .Date.IsZero) (not .Params.hideDate) }}{{ partial "post-meta.html" . }}{{ end }}
   <h1 class="post__title">{{ .Title }}</h1>
 
   {{ with .Params.description }}

@@ -3,6 +3,9 @@ title: "사이트 설명"
 description: "이 사이트에서 사용된 기술들"
 aliases: ["contact"]
 date: 2020-09-03T06:20:08+09:00
+hideDate: true
+hideHeader: true
+hideFooter: true
 ---
 
 이 사이트는 아래 소스를 이용해서 만들어졌습니다.
