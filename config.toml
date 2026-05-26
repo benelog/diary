@@ -1,5 +1,5 @@
 baseURL = "https://diary.benelog.net/"
-languageCode = "ko-kr"
+locale = "ko-KR"
 title = "diary.benelog.net"
 
 [taxonomies]
