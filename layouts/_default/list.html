@@ -1,0 +1,10 @@
+{{ define "main" }}
+<header class="list-head">
+  <h1 class="post__title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="post__body">{{ . }}</div>{{ end }}
+</header>
+{{ $posts := where .Pages "Type" "post" }}
+{{ $paginator := .Paginate $posts 25 }}
+{{ partial "year-archive.html" $paginator.Pages }}
+{{ partial "pagination.html" $paginator }}
+{{ end }}

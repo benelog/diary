@@ -1,0 +1,520 @@
+/* ===== diary — 둥근모꼴 / PC통신 ===== */
+
+/* 1. Reset */
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+ul, ol { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+
+/* 2. Variables — DOS palette */
+:root {
+  --bg: #000084;            /* IBM/DOS classic blue */
+  --bg-deep: #00006a;
+  --fg: #ffffff;
+  --fg-dim: #c8c8e0;
+  --fg-mute: #8888b8;
+  --link: #ffff44;          /* DOS yellow */
+  --link-hover: #ffffff;
+  --accent: #00ffff;        /* cyan */
+  --panel: #bbbbbb;
+  --panel-fg: #000000;
+  --rule: rgba(255, 255, 255, 0.25);
+  --rule-soft: rgba(255, 255, 255, 0.12);
+  --shadow-raised: 2px 2px 0 #000, -2px -2px 0 #fff;
+  --shadow-sunken: -2px -2px 0 #000, 2px 2px 0 #fff;
+  --measure: 44rem;
+  --pad: clamp(1rem, 3vw, 1.75rem);
+  --stack: 'DungGeunMo', 'Galmuri11', 'D2Coding', 'NanumGothicCoding', Menlo, Consolas, monospace;
+}
+
+/* 3. Typography — pure DungGeunMo */
+html { font-size: 16px; }   /* DungGeunMo is a 16px bitmap font; keep crisp */
+body {
+  font-family: var(--stack);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--fg);
+  background: var(--bg);
+  word-break: keep-all;
+  line-break: strict;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
+  font-smooth: never;
+  text-rendering: geometricPrecision;
+  font-feature-settings: normal;
+  min-height: 100vh;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--stack);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--fg);
+}
+code, pre, .mono { font-family: var(--stack); }
+
+::selection { background: var(--link); color: var(--bg); }
+
+/* 4. Layout */
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+hr, hr.rule, hr.soften {
+  border: 0;
+  border-top: 1px solid var(--fg);
+  margin: 1.5rem 0;
+}
+
+/* 5. Header / nav */
+.site-head {
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+}
+.site-head__title {
+  display: inline-block;
+  font-size: 24px;
+  color: #000000;
+  background: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0;
+  padding: 10px 15px;
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 5px #ffffff, 11px 13px 0 4px #000;
+  margin: 0 0 1.2rem;
+}
+.site-head__title:hover {
+  background: var(--link);
+}
+.site-head__sub {
+  color: var(--fg-dim);
+  margin-top: 0.6rem;
+  font-size: 16px;
+}
+.rule {
+  border: 0;
+  border-top: 1px solid var(--fg);
+  margin: 1.5rem auto;
+  max-width: 100%;
+}
+.site-head .rule { margin: 1.5rem auto; }
+/* DOS menu bar — Norton Commander / PC Tools / Turbo Vision */
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0;
+  font-size: 16px;
+  background: #00aaaa;
+  color: #000000;
+  box-shadow: 0 2px 0 #000;
+  padding: 0.15rem clamp(0.5rem, 2vw, 1.2rem);
+  text-align: left;
+}
+.nav a {
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+  padding: 0.15rem 0.7rem;
+  letter-spacing: 0;
+  transition: none;
+}
+.nav a:hover {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* 6. Post */
+.post { padding: 1rem 0 3rem; }
+.post__back {
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  color: var(--fg-dim);
+}
+.post__back a { color: var(--link); text-decoration: none; }
+.post__back a:hover { color: var(--fg); background: var(--bg-deep); }
+.post__date {
+  color: var(--accent);
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+.post__date .latin { font-family: inherit; font-style: normal; }
+.post__title {
+  display: inline-block;
+  font-size: 24px;
+  margin: 0.5rem 0 1.6rem;
+  color: #000000;
+  background: #ffffff;
+  padding: 10px 15px;
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 5px #ffffff, 11px 13px 0 4px #000;
+  line-height: 1.3;
+  max-width: 100%;
+}
+.post__title a { color: inherit; text-decoration: none; }
+.post__title a:hover { background: var(--link); }
+
+/* Description — soft side comment */
+.post__description {
+  color: var(--fg-dim);
+  padding: 0.2rem 0 0.2rem 0.9rem;
+  margin: 0 0 1.75rem;
+  border-left: 1px dashed var(--rule);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.post__body {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.post__body p { margin: 1.2em 0; }
+.post__body > *:first-child { margin-top: 0; }
+.post__body > *:last-child { margin-bottom: 0; }
+.post__body h2 {
+  font-size: 24px;
+  margin: 2.2em 0 0.8em;
+  color: var(--link);
+}
+.post__body h3 {
+  font-size: 16px;
+  margin: 1.8em 0 0.5em;
+  color: var(--accent);
+}
+.post__body h3::before { content: '> '; color: var(--fg); }
+.post__body a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.post__body a:hover {
+  color: var(--bg);
+  background: var(--link);
+  text-decoration: none;
+}
+.post__body blockquote {
+  margin: 1.6em 0;
+  padding: 0.4em 1em;
+  border-left: 4px double var(--fg);
+  color: var(--fg-dim);
+  background: var(--bg-deep);
+}
+.post__body blockquote::before {
+  content: '" ';
+  color: var(--link);
+}
+.post__body img {
+  margin: 2em auto;
+  border: 2px solid var(--panel);
+  box-shadow: var(--shadow-raised);
+}
+.post__body code {
+  font-family: var(--stack);
+  font-size: 16px;
+  background: var(--bg-deep);
+  color: var(--link);
+  padding: 0 0.3em;
+}
+.post__body pre {
+  background: var(--bg-deep);
+  color: var(--fg);
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  line-height: 1.5;
+  border: 1px solid var(--panel);
+  box-shadow: var(--shadow-raised);
+}
+.post__body pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+.post__body ul, .post__body ol {
+  margin: 1.2em 0;
+  padding-left: 0;
+  list-style: none;
+}
+.post__body ul li, .post__body ol li {
+  position: relative;
+  padding-left: 1.6em;
+  margin: 0.3em 0;
+}
+.post__body ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0.3em;
+  color: var(--link);
+}
+.post__body ol { counter-reset: ol; }
+.post__body ol li {
+  counter-increment: ol;
+}
+.post__body ol li::before {
+  content: counter(ol) '.';
+  position: absolute;
+  left: 0;
+  color: var(--link);
+  min-width: 1.5em;
+}
+.post__body hr {
+  margin: 2.5em 0;
+  border: 0;
+  border-top: 1px dashed var(--fg);
+}
+.post__divider {
+  text-align: center;
+  color: var(--link);
+  letter-spacing: 0.6em;
+  margin: 3rem 0;
+  font-size: 16px;
+  user-select: none;
+}
+.post__divider::before { content: '═══════════'; }
+.post__meta {
+  font-size: 16px;
+  color: var(--fg-dim);
+  margin-top: 3rem;
+}
+.post__nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0 2rem;
+  gap: 1rem;
+  font-size: 16px;
+}
+.post__nav a {
+  display: inline-block;
+  color: var(--panel-fg);
+  background: var(--panel);
+  text-decoration: none;
+  padding: 0.25rem 0.85rem;
+  box-shadow: var(--shadow-raised);
+}
+.post__nav a:hover {
+  color: var(--bg);
+  background: var(--link);
+  box-shadow: var(--shadow-sunken);
+}
+.post__nav span { flex: 1; }
+.post__nav span:last-child  { text-align: right; }
+
+/* 7. Archive / index */
+.archive { margin: 2rem 0 3rem; }
+.archive__year {
+  font-size: 24px;
+  color: var(--link);
+  margin: 2.5rem 0 0.8rem;
+  letter-spacing: 0.1em;
+}
+.archive__year::before { content: '== '; color: var(--fg); }
+.archive__year::after  { content: ' =='; color: var(--fg); }
+.archive__year:first-child { margin-top: 1rem; }
+.archive__list { padding: 0; }
+.archive__entry {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1rem;
+  padding: 0.5rem 0.5rem;
+  border-bottom: 1px dashed var(--rule);
+  align-items: baseline;
+  transition: none;
+}
+.archive__entry:hover {
+  background: var(--link);
+  color: var(--bg);
+  border-bottom-color: var(--link);
+}
+.archive__entry:hover .archive__date,
+.archive__entry:hover .archive__title,
+.archive__entry:hover .archive__tag { color: var(--bg); }
+.archive__entry:hover .archive__tag {
+  background: var(--bg);
+  color: var(--link);
+}
+.archive__date {
+  color: var(--accent);
+  font-size: 16px;
+  letter-spacing: 0;
+}
+.archive__main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.8rem;
+}
+.archive__title {
+  color: var(--fg);
+  text-decoration: none;
+  line-height: 1.5;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.archive__title:hover { text-decoration: underline; }
+.archive__tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: baseline;
+  flex: 0 1 auto;
+}
+.archive__tag {
+  display: inline-block;
+  font-family: var(--stack);
+  font-size: 16px;
+  color: var(--link);
+  background: transparent;
+  padding: 0 0.4rem;
+  text-decoration: none;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: none;
+}
+.archive__tag::before { content: '#'; opacity: 0.7; }
+.archive__tag:hover { background: var(--link); color: var(--bg); }
+.archive__tag:hover::before { color: var(--bg); opacity: 1; }
+.archive__more {
+  text-align: center;
+  margin: 2.5rem 0 1rem;
+  font-size: 16px;
+}
+.archive__more a {
+  color: var(--link);
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  background: var(--panel);
+  color: var(--panel-fg);
+  box-shadow: var(--shadow-raised);
+  display: inline-block;
+}
+.archive__more a:hover {
+  background: var(--link);
+  box-shadow: var(--shadow-sunken);
+}
+
+/* 8. List page header */
+.list-head {
+  text-align: center;
+  margin: 2rem 0 2.5rem;
+}
+.list-head .post__title { margin: 0.5rem 0 1rem; }
+
+/* 9. Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 0 2rem;
+  font-size: 16px;
+}
+.pagination a {
+  color: var(--link);
+  text-decoration: none;
+  padding: 0.2rem 0.7rem;
+  background: var(--panel);
+  color: var(--panel-fg);
+  box-shadow: var(--shadow-raised);
+  display: inline-block;
+}
+.pagination a:hover {
+  background: var(--link);
+  box-shadow: var(--shadow-sunken);
+}
+.pagination__count { color: var(--fg-dim); }
+.pagination__prev, .pagination__next { min-width: 5rem; }
+.pagination__next { text-align: right; }
+
+/* 10. Footer */
+.site-foot {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  color: var(--fg-dim);
+  font-size: 16px;
+}
+.site-foot__orn { display: none; }
+.site-foot p { margin: 0.4rem 0; }
+.site-foot::before {
+  content: '─ ─ ─ ─ ─ ─ ─ ─';
+  display: block;
+  color: var(--link);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+/* Tag cloud (for /tags/ page) */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+  margin: 1.5rem 0 3rem;
+}
+.tag-cloud__item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  color: var(--panel-fg);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0.2rem 0.7rem;
+  background: var(--panel);
+  box-shadow: var(--shadow-raised);
+}
+.tag-cloud__item:hover {
+  background: var(--link);
+  color: var(--bg);
+  box-shadow: var(--shadow-sunken);
+}
+.tag-cloud__item:hover .tag-cloud__count { color: var(--bg); }
+.tag-cloud__count { color: var(--bg); }
+.tag-section { margin: 3rem 0; }
+
+/* 11. Comments (Giscus wrapper from theme) */
+.row-fluid {
+  margin-top: 2.5em;
+  padding: 1rem 1.2rem;
+  background: var(--panel);
+  color: var(--panel-fg);
+  box-shadow: var(--shadow-raised);
+}
+.row-fluid h4 {
+  font-family: var(--stack);
+  font-size: 16px;
+  margin: 0.5rem 0 0.8rem;
+  color: var(--panel-fg);
+}
+
+/* 12. Animations — kept minimal for retro feel */
+@keyframes flicker {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+main > * {
+  animation: flicker 200ms steps(2, end) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* 13. Responsive */
+@media (max-width: 720px) {
+  .site-head { padding: 2rem 0 1rem; }
+  .site-head__title { font-size: 24px; }
+  .archive__entry {
+    grid-template-columns: 3.4rem 1fr;
+    gap: 0.7rem;
+    padding: 0.45rem;
+  }
+  .archive__year { font-size: 20px; }
+  .post__title { font-size: 24px; }
+  .post__body h2 { font-size: 20px; }
+  .nav { gap: 0.2rem 0.4rem; }
+  .post__nav { flex-direction: column; gap: 0.7rem; }
+  .post__nav span:last-child { text-align: left; }
+  .post__nav span:last-child::after { content: ''; }
+  .post__nav span:first-child::before { content: '« '; }
+}

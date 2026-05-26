@@ -7,8 +7,7 @@ date: 2020-09-03T06:20:08+09:00
 
 이 사이트는 아래 소스를 이용해서 만들어졌습니다.
 
-* 테마 : https://github.com/honux77/hugo.386k
-    * 폰트 : 동근모꼴 (https://cactus.tistory.com/193)
+* 폰트 : 동근모꼴 (https://cactus.tistory.com/193)
 * 컨텐츠 작성 : https://forestry.io/ 
 * 배포 : https://www.netlify.com/
 

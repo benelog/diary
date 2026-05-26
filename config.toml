@@ -1,7 +1,6 @@
 baseURL = "https://diary.benelog.net/"
 languageCode = "ko-kr"
 title = "diary.benelog.net"
-theme = "hugo.386k"
 
 [taxonomies]
    tag = "tags"
@@ -12,10 +11,13 @@ theme = "hugo.386k"
     mainpagesubtitle = "주로 여가 활동에 대한 일기"
     showhugo = true
     loadonepass = true
-    customCSS = ["css/custom.css"]
+    customCSS = []
+
+[pagination]
+  pagerSize = 25
 
 [permalinks]
-  post = ":year/:filename/"
+  post = ":year/:contentbasename/"
 
 [menu]
   # This displays buttons in the navbar to access your contents
@@ -34,6 +36,11 @@ theme = "hugo.386k"
     name = "모든 글"
     url = "/post/"       # The path can lead to a content folder too.
     weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "태그"
+    url = "/tags/"
+    weight = 25
   [[menu.main]]
     name = "RSS"
     url = "/index.xml"

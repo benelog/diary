@@ -1,0 +1,13 @@
+{{ define "main" }}
+<header class="list-head">
+  <h1 class="post__title">{{ .Title }}</h1>
+  {{ with .Content }}<div>{{ . }}</div>{{ end }}
+</header>
+<div class="tag-cloud">
+  {{ range .Data.Terms.ByCount }}
+    <a href="{{ .Page.Permalink }}" class="tag-cloud__item">
+      {{ .Page.Title }}<span class="tag-cloud__count">{{ .Count }}</span>
+    </a>
+  {{ end }}
+</div>
+{{ end }}

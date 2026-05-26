@@ -1,0 +1,8 @@
+{{ if not (and (eq .Kind "page") (eq .Type "post")) }}
+<header class="site-head wrap">
+  <a href="{{ .Site.BaseURL }}" class="site-head__title">{{ .Site.Title }}</a>
+  {{ if .IsHome }}
+    {{ with .Site.Params.mainpagesubtitle }}<p class="site-head__sub">{{ . }}</p>{{ end }}
+  {{ end }}
+</header>
+{{ end }}

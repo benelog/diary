@@ -1,0 +1,3 @@
+{{ $weekdays := slice "일요일" "월요일" "화요일" "수요일" "목요일" "금요일" "토요일" }}
+{{ $w := index $weekdays (int (.Date.Weekday)) }}
+<p class="post__date"><span class="latin">{{ .Date.Format "2006년 1월 2일" }}</span> · {{ $w }}</p>

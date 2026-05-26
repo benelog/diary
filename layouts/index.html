@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ $posts := where .Site.RegularPages "Type" "post" }}
+<section class="archive">
+  {{ partial "year-archive.html" (first 30 $posts) }}
+  {{ if gt (len $posts) 30 }}
+    <p class="archive__more"><a class="latin" href="/post/">전체 보관함 →</a></p>
+  {{ end }}
+</section>
+{{ end }}

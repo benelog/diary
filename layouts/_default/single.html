@@ -1,0 +1,32 @@
+{{ define "main" }}
+<article class="post">
+  <p class="post__back latin"><a href="{{ .Site.BaseURL }}">← 처음으로</a></p>
+  {{ if not .Date.IsZero }}{{ partial "post-meta.html" . }}{{ end }}
+  <h1 class="post__title">{{ .Title }}</h1>
+
+  {{ with .Params.description }}
+    <aside class="post__description">{{ . }}</aside>
+  {{ end }}
+
+  <div class="post__body">
+    {{ .Content }}
+  </div>
+
+  <div class="post__divider"></div>
+
+  {{ if or .Params.categories .Params.tags }}
+    <p class="post__meta">
+      {{ with .Params.categories }}{{ delimit . " · " }}{{ end }}
+      {{ if and .Params.categories .Params.tags }} · {{ end }}
+      {{ with .Params.tags }}{{ delimit . " · " }}{{ end }}
+    </p>
+  {{ end }}
+
+  <nav class="post__nav">
+    <span>{{ with .PrevInSection }}<a href="{{ .Permalink }}">← {{ .Title }}</a>{{ end }}</span>
+    <span>{{ with .NextInSection }}<a href="{{ .Permalink }}">{{ .Title }} →</a>{{ end }}</span>
+  </nav>
+
+  {{ partial "comments.html" . }}
+</article>
+{{ end }}

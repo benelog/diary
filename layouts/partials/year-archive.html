@@ -1,0 +1,21 @@
+{{/* . is a Pages slice */}}
+{{ range .GroupByDate "2006" }}
+  <h2 class="archive__year">{{ .Key }}</h2>
+  <ul class="archive__list">
+    {{ range .Pages }}
+      <li class="archive__entry">
+        <span class="archive__date latin">{{ .Date.Format "01.02" }}</span>
+        <div class="archive__main">
+          <a class="archive__title" href="{{ .Permalink }}">{{ .Title }}</a>
+          {{ with .Params.tags }}
+            <div class="archive__tags">
+              {{ range . }}
+                <a class="archive__tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
