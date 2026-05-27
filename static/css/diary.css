@@ -473,23 +473,24 @@ hr, hr.rule, hr.soften {
 .tag-cloud__item {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.3rem;
-  color: var(--panel-fg);
+  color: var(--link);
   text-decoration: none;
   font-size: 16px;
-  padding: 0.2rem 0.7rem;
-  background: var(--panel);
-  box-shadow: var(--shadow-raised);
+  padding: 0 0.4rem;
+  line-height: 1.4;
+  white-space: nowrap;
 }
+.tag-cloud__item::before { content: '#'; opacity: 0.7; }
 .tag-cloud__item:hover,
 .tag-cloud__item:focus-visible {
   background: var(--link);
   color: var(--bg);
-  box-shadow: var(--shadow-sunken);
 }
+.tag-cloud__item:hover::before,
+.tag-cloud__item:focus-visible::before { color: var(--bg); opacity: 1; }
 .tag-cloud__item:hover .tag-cloud__count,
 .tag-cloud__item:focus-visible .tag-cloud__count { color: var(--bg); }
-.tag-cloud__count { color: var(--bg); }
+.tag-cloud__count { color: var(--link); }
 .tag-section { margin: 3rem 0; }
 
 /* 11. Comments (Giscus wrapper from theme) */
