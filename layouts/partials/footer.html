@@ -1,5 +1,5 @@
 <footer class="site-foot wrap">
-  <hr class="rule">
+  {{ if not (and (eq .Kind "page") (eq .Type "post")) }}<hr class="rule">{{ end }}
   <div class="site-foot__orn">·   ·   ·</div>
   <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
 </footer>
