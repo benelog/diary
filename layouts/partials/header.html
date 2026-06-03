@@ -1,4 +1,4 @@
-{{ if and (not .Params.hideHeader) (not (and (eq .Kind "page") (eq .Type "post"))) (not (eq .Kind "taxonomy")) }}
+{{ if and (not .Params.hideHeader) (not (eq .Type "post")) (not (eq .Kind "taxonomy")) }}
 <header class="site-head wrap">
   <a href="{{ .Site.BaseURL }}" class="site-head__title">{{ .Site.Title }}</a>
   {{ if .IsHome }}
