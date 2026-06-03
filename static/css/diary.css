@@ -462,6 +462,7 @@ hr, hr.rule, hr.soften {
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
 }
+.site-foot--home::before { content: none; }
 
 /* Tag cloud (for /tags/ page) */
 .tag-cloud {
