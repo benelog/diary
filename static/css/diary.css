@@ -455,14 +455,6 @@ hr, hr.rule, hr.soften {
 }
 .site-foot__orn { display: none; }
 .site-foot p { margin: 0.4rem 0; }
-.site-foot::before {
-  content: '─ ─ ─ ─ ─ ─ ─ ─';
-  display: block;
-  color: var(--link);
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
-}
-.site-foot--home::before { content: none; }
 
 /* Tag cloud (for /tags/ page) */
 .tag-cloud {
