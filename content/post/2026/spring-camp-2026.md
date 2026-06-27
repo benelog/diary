@@ -6,9 +6,10 @@ description: "SpringCamp 2026"
 ---
 
 6월 13일에 열린 SpringCamp 2026에 다녀왔다.
-전체 발표 자료는 [springcamp/presentations](https://github.com/springcamp/presentations/tree/main/SpringCamp-2026-Presentations) 저장소에 공개되어 있다.
-
 유익한 발표가 많았고, 오랜만에 반가운 분들을 많이 볼 수 있어서 좋았다.
+매년 이 행사를 이어가고 있는 분들께 감사한 마음이 들었다.
+
+전체 발표 자료는 [springcamp/presentations](https://github.com/springcamp/presentations/tree/main/SpringCamp-2026-Presentations) 저장소에 공개되어 있다.
 
 ## Spring I/O 2026. 변화하는 스프링, 떠오르는 AI, 그리고 우리의 준비
 
@@ -16,10 +17,10 @@ description: "SpringCamp 2026"
 
 * MicroService -> Modular Monolith
 * 카카오뱅킹 오픈뱅킹에 WebFlux가 적용되어 있지만, 기술 난이도가 높아서 소수만이 유지보수할수 있음.
-* Spring MVC로 마이그리에션 중.
+    * Spring MVC로 마이그리에션 중.
 * Spring Modulith. 컴파일러가 Internal 패키지를 외부 접근 불가하게함.
-     * 자세한 사례 : https://tech.kakaobank.com/posts/2507-legacy-to-modular-monolith-with-spring-modulith/
-* 코드 생성 비용이 낮아질수록, 방향을 정하는 능력의 가치가 올라간다.
+     * 자세한 참고 : https://tech.kakaobank.com/posts/2507-legacy-to-modular-monolith-with-spring-modulith/
+* 코드 생성 비용이 낮아질수록, 방향을 정하는 능력의 가치가 올라간다
 
 ## 자율 에이전트를 활용한 AI 네이티브 자바 개발
 
