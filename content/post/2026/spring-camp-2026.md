@@ -2,8 +2,10 @@
 title: "SpringCamp 2026"
 date: 2026-06-13T21:00:00+09:00
 categories: ["2026년"]
-description: "SpringCamp 2026"
+description: "SpringCamp 2026의 세션별 후기"
 ---
+
+![](/spring-camp-2026.jpg)
 
 6월 13일에 열린 SpringCamp 2026에 다녀왔다.
 유익한 발표가 많았고, 오랜만에 반가운 분들을 많이 볼 수 있어서 좋았다.
