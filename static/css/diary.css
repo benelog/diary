@@ -326,23 +326,29 @@ hr, hr.rule, hr.soften {
   flex-direction: column;
   justify-content: center;
   min-height: 44px;
-  color: var(--panel-fg);
-  background: var(--panel);
+  color: var(--link);
+  background: transparent;
   text-decoration: none;
-  padding: 0.5rem 0.85rem;
+  padding: 0.6rem;
   overflow-wrap: anywhere;
-  box-shadow: var(--shadow-raised);
+  border-bottom: 1px dashed var(--rule);
 }
 .post__nav a:hover,
 .post__nav a:focus-visible {
   color: var(--bg);
   background: var(--link);
-  box-shadow: var(--shadow-sunken);
+  border-bottom-color: transparent;
 }
-.post__nav-label { margin-bottom: 0.3rem; }
+.post__nav-label { margin-bottom: 0.3rem; color: var(--accent); }
+.post__nav a:hover .post__nav-label,
+.post__nav a:focus-visible .post__nav-label { color: inherit; }
 .post__nav-prev { grid-column: 1; }
 .post__nav-next { grid-column: 2; text-align: right; }
-.post__nav .post__nav-all { grid-column: 1 / -1; justify-self: center; }
+.post__nav .post__nav-all {
+  grid-column: 1 / -1;
+  justify-self: center;
+  border-bottom: 0;
+}
 
 /* 7. Archive / index */
 .archive { margin: 2rem 0 3rem; }

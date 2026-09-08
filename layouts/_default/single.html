@@ -24,7 +24,7 @@
     <nav class="post__nav" aria-label="글 탐색">
       {{ with .PrevInSection }}<a class="post__nav-prev" href="{{ .RelPermalink }}" rel="prev"><span class="post__nav-label">← 이전 글</span><span>{{ .Title }}</span></a>{{ end }}
       {{ with .NextInSection }}<a class="post__nav-next" href="{{ .RelPermalink }}" rel="next"><span class="post__nav-label">다음 글 →</span><span>{{ .Title }}</span></a>{{ end }}
-      <a class="post__nav-all" href="{{ "post/" | relURL }}">모든 글</a>
+      <a class="post__nav-all" href="{{ "post/" | relURL }}">[ 모든 글 ]</a>
     </nav>
   </footer>
   {{ end }}
