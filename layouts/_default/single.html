@@ -12,8 +12,6 @@
     {{ .Content }}
   </div>
 
-  <div class="post__divider"></div>
-
   {{ if or .Params.categories .Params.tags }}
     <p class="post__meta">
       {{ range .GetTerms "categories" }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}

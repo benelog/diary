@@ -1,6 +1,6 @@
 {{/* . is a Pages slice */}}
 {{ range .GroupByDate "2006" }}
-  <section class="archive__group" data-year="{{ .Key }}" aria-labelledby="year-{{ .Key }}">
+  <section class="archive__group" aria-labelledby="year-{{ .Key }}">
   <h2 class="archive__year" id="year-{{ .Key }}" tabindex="-1">{{ .Key }}</h2>
   <ul class="archive__list">
     {{ range .Pages }}

@@ -9,13 +9,10 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote {
 ul, ol { list-style: none; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
-a:focus-visible, button:focus-visible, input:focus-visible {
+a:focus-visible {
   outline: 2px solid var(--link);
   outline-offset: 3px;
 }
-[hidden] { display: none !important; }
-button, input { font: inherit; border-radius: 0; }
-button { cursor: pointer; }
 
 /* 2. Variables — DOS palette */
 :root {
@@ -288,15 +285,6 @@ hr, hr.rule, hr.soften {
   border: 0;
   border-top: 1px dashed var(--fg);
 }
-.post__divider {
-  text-align: center;
-  color: var(--link);
-  letter-spacing: 0.6em;
-  margin: 3rem 0;
-  font-size: 16px;
-  user-select: none;
-}
-.post__divider::before { content: '═══════════'; }
 .post__meta {
   display: flex;
   flex-wrap: wrap;
@@ -536,37 +524,7 @@ hr, hr.rule, hr.soften {
 .tag-cloud__count { color: var(--fg-dim); white-space: nowrap; }
 .tag-section { margin: 3rem 0; }
 
-/* Archive controls — text terminal forms */
-.title-search {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin-bottom: 1rem;
-}
-.title-search label { white-space: nowrap; color: var(--fg-dim); }
-.title-search input {
-  min-width: 0;
-  width: 100%;
-  min-height: 44px;
-  padding: 0.4rem 0.6rem;
-  border: 1px solid var(--fg-dim);
-  background: var(--bg-deep);
-  color: var(--fg);
-}
-.title-search input::placeholder { color: var(--fg-dim); opacity: 1; }
-.title-search button {
-  min-height: 44px;
-  padding: 0.3rem 0.8rem;
-  border: 0;
-  box-shadow: var(--shadow-raised);
-  background: var(--panel);
-  color: var(--panel-fg);
-  white-space: nowrap;
-}
-.title-search button:hover, .title-search button:focus-visible {
-  background: var(--link);
-  box-shadow: var(--shadow-sunken);
-}
+/* Archive year navigation */
 .year-nav { display: flex; flex-wrap: wrap; gap: 0 0.4rem; }
 .year-nav a {
   display: inline-flex;
@@ -577,8 +535,7 @@ hr, hr.rule, hr.soften {
   text-decoration: none;
 }
 .year-nav a:hover, .year-nav a:focus-visible { background: var(--link); color: var(--bg); }
-.archive__status { margin: 1rem 0; color: var(--fg-dim); overflow-wrap: anywhere; }
-.archive__empty { margin: 2rem 0; }
+.archive__count { margin: 1rem 0; color: var(--fg-dim); }
 
 /* 11. Comments (Giscus wrapper from theme) */
 .row-fluid {
