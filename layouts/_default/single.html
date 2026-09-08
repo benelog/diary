@@ -12,19 +12,25 @@
     {{ .Content }}
   </div>
 
-  {{ if or .Params.categories .Params.tags }}
-    <p class="post__meta">
-      {{ range .GetTerms "categories" }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
-      {{ range .GetTerms "tags" }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}
-    </p>
-  {{ end }}
-
   {{ if eq .Type "post" }}
-  <nav class="post__nav" aria-label="글 탐색">
-    {{ with .PrevInSection }}<a class="post__nav-prev" href="{{ .RelPermalink }}" rel="prev"><span class="post__nav-label">← 이전 글</span><span>{{ .Title }}</span></a>{{ end }}
-    {{ with .NextInSection }}<a class="post__nav-next" href="{{ .RelPermalink }}" rel="next"><span class="post__nav-label">다음 글 →</span><span>{{ .Title }}</span></a>{{ end }}
-    <a class="post__nav-all" href="{{ "post/" | relURL }}">모든 글</a>
-  </nav>
+  <footer class="post__end">
+    <div class="post__end-bar" aria-hidden="true">
+      <span>[ 글 끝 ]</span>
+      <span>다른 글 둘러보기</span>
+    </div>
+    {{ if or .Params.categories .Params.tags }}
+      <p class="post__meta">
+        {{ range .GetTerms "categories" }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+        {{ range .GetTerms "tags" }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}
+      </p>
+    {{ end }}
+
+    <nav class="post__nav" aria-label="글 탐색">
+      {{ with .PrevInSection }}<a class="post__nav-prev" href="{{ .RelPermalink }}" rel="prev"><span class="post__nav-label">← 이전 글</span><span>{{ .Title }}</span></a>{{ end }}
+      {{ with .NextInSection }}<a class="post__nav-next" href="{{ .RelPermalink }}" rel="next"><span class="post__nav-label">다음 글 →</span><span>{{ .Title }}</span></a>{{ end }}
+      <a class="post__nav-all" href="{{ "post/" | relURL }}">모든 글</a>
+    </nav>
+  </footer>
   {{ end }}
 
   {{ partial "comments.html" . }}

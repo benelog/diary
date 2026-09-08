@@ -285,13 +285,26 @@ hr, hr.rule, hr.soften {
   border: 0;
   border-top: 1px dashed var(--fg);
 }
+.post__end { margin-top: 2.5rem; }
+.post__end-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  padding: 0.45rem 0.6rem;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg-deep);
+  color: var(--accent);
+}
+.post__end-bar span:last-child { color: var(--fg-dim); }
 .post__meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem 0.8rem;
   font-size: 16px;
   color: var(--fg-dim);
-  margin-top: 3rem;
+  margin-top: 0.6rem;
 }
 .post__meta a {
   display: inline-flex;
@@ -308,7 +321,7 @@ hr, hr.rule, hr.soften {
 .post__nav {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 3rem 0 2rem;
+  margin: 1.2rem 0 0;
   gap: 1rem;
   font-size: 16px;
 }
@@ -552,16 +565,14 @@ hr, hr.rule, hr.soften {
   color: var(--panel-fg);
 }
 
-/* 12. Animations — kept minimal for retro feel */
-@keyframes flicker {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-main > * {
-  animation: flicker 200ms steps(2, end) both;
-}
+/* 12. Terminal output — JavaScript measures the rendered text lines. */
+.terminal-reveal-pending { clip-path: inset(0 0 100% 0); }
 @media (prefers-reduced-motion: reduce) {
+  .terminal-reveal-pending { clip-path: none !important; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  main { clip-path: none !important; }
 }
 
 /* 13. Responsive */
