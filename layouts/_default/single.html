@@ -14,10 +14,6 @@
 
   {{ if eq .Type "post" }}
   <footer class="post__end">
-    <div class="post__end-bar" aria-hidden="true">
-      <span>[ 글 끝 ]</span>
-      <span>다른 글 둘러보기</span>
-    </div>
     {{ if or .Params.categories .Params.tags }}
       <p class="post__meta">
         {{ range .GetTerms "categories" }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}

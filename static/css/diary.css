@@ -285,19 +285,15 @@ hr, hr.rule, hr.soften {
   border: 0;
   border-top: 1px dashed var(--fg);
 }
-.post__end { margin-top: 2.5rem; }
-.post__end-bar {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.3rem 1rem;
-  padding: 0.45rem 0.6rem;
-  border-top: 1px solid var(--accent);
-  border-bottom: 1px solid var(--rule);
+.post__end {
+  margin: 3rem 0 1rem;
+  padding: 1rem 1.2rem;
+  max-width: calc(100% - 16px);
+  border: 2px solid #000000;
   background: var(--bg-deep);
-  color: var(--accent);
+  box-shadow: var(--shadow-title);
 }
-.post__end-bar span:last-child { color: var(--fg-dim); }
+.post__end > :first-child { margin-top: 0; }
 .post__meta {
   display: flex;
   flex-wrap: wrap;
@@ -599,4 +595,9 @@ hr, hr.rule, hr.soften {
   .post__body h2 { font-size: 20px; }
   .post__nav { grid-template-columns: minmax(0, 1fr); gap: 0.8rem; }
   .post__nav-next { grid-column: 1; text-align: left; }
+  .post__end {
+    max-width: calc(100% - 8px);
+    padding: 0.85rem;
+    box-shadow: 0 0 0 4px #ffffff, 8px 10px 0 3px #000;
+  }
 }
