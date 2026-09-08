@@ -1,10 +1,25 @@
 {{ define "main" }}
 <header class="list-head">
-  <h1 class="post__title">{{ .Title }}</h1>
+  <h1 class="post__title">{{ if and .IsSection (eq .Section "post") }}모든 글{{ else }}{{ .Title }}{{ end }}</h1>
   {{ with .Content }}<div class="post__body">{{ . }}</div>{{ end }}
 </header>
 {{ $posts := where .Pages "Type" "post" }}
+{{ if and .IsSection (eq .Section "post") }}
+<section class="archive archive--all" data-post-archive>
+  {{ partial "title-search.html" . }}
+  <nav class="year-nav" aria-label="연도별 글 바로가기">
+    {{ range $posts.GroupByDate "2006" }}
+      <a href="#year-{{ .Key }}" data-year-link="{{ .Key }}">[{{ .Key }}]</a>
+    {{ end }}
+  </nav>
+  <p class="archive__status" role="status" aria-live="polite" aria-atomic="true">전체 {{ len $posts }}편</p>
+  <p class="archive__empty" hidden>일치하는 제목이 없습니다. 다른 검색어를 입력해 주세요.</p>
+  <noscript><p class="archive__status">제목 검색은 JavaScript가 필요합니다. 연도별 바로가기나 브라우저의 페이지 내 찾기를 이용해 주세요.</p></noscript>
+  {{ partial "year-archive.html" $posts }}
+</section>
+{{ else }}
 {{ $paginator := .Paginate $posts 25 }}
 {{ partial "year-archive.html" $paginator.Pages }}
 {{ partial "pagination.html" $paginator }}
+{{ end }}
 {{ end }}

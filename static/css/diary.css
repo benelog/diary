@@ -9,10 +9,13 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote {
 ul, ol { list-style: none; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
-a:focus-visible {
-  outline: 1px solid var(--link);
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--link);
   outline-offset: 3px;
 }
+[hidden] { display: none !important; }
+button, input { font: inherit; border-radius: 0; }
+button { cursor: pointer; }
 
 /* 2. Variables — DOS palette */
 :root {
@@ -78,7 +81,7 @@ hr, hr.rule, hr.soften {
 
 /* 5. Header / nav */
 .site-head {
-  padding: 3rem 0 1.5rem;
+  padding: 2.5rem 0 1rem;
   text-align: center;
 }
 .site-head__title {
@@ -113,19 +116,20 @@ hr, hr.rule, hr.soften {
 .site-head .rule { margin: 1.5rem auto; }
 /* DOS menu bar — Norton Commander / PC Tools / Turbo Vision */
 .nav {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 0;
   font-size: 16px;
   background: #00aaaa;
   color: #000000;
   box-shadow: 0 2px 0 #000;
-  padding: 0.15rem clamp(0.5rem, 2vw, 1.2rem);
   text-align: left;
 }
+.nav__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
 .nav a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: #000000;
   text-decoration: none;
   padding: 0.15rem 0.7rem;
@@ -133,7 +137,8 @@ hr, hr.rule, hr.soften {
   transition: none;
 }
 .nav a:hover,
-.nav a:focus-visible {
+.nav a:focus-visible,
+.nav a[aria-current] {
   background: var(--bg);
   color: var(--fg);
   outline-color: var(--fg);
@@ -148,6 +153,7 @@ hr, hr.rule, hr.soften {
   color: var(--fg-dim);
 }
 .post__back a { color: var(--link); text-decoration: none; }
+.post__back a { display: inline-flex; align-items: center; min-height: 44px; }
 .post__back a:hover,
 .post__back a:focus-visible { color: var(--fg); background: var(--bg-deep); }
 .post__date {
@@ -292,23 +298,42 @@ hr, hr.rule, hr.soften {
 }
 .post__divider::before { content: '═══════════'; }
 .post__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
   font-size: 16px;
   color: var(--fg-dim);
   margin-top: 3rem;
 }
+.post__meta a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.5rem;
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+.post__meta a:hover, .post__meta a:focus-visible {
+  color: var(--bg);
+  background: var(--link);
+}
 .post__nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 3rem 0 2rem;
   gap: 1rem;
   font-size: 16px;
 }
 .post__nav a {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 44px;
   color: var(--panel-fg);
   background: var(--panel);
   text-decoration: none;
-  padding: 0.25rem 0.85rem;
+  padding: 0.5rem 0.85rem;
+  overflow-wrap: anywhere;
   box-shadow: var(--shadow-raised);
 }
 .post__nav a:hover,
@@ -317,39 +342,47 @@ hr, hr.rule, hr.soften {
   background: var(--link);
   box-shadow: var(--shadow-sunken);
 }
-.post__nav span { flex: 1; }
-.post__nav span:last-child  { text-align: right; }
+.post__nav-label { margin-bottom: 0.3rem; }
+.post__nav-prev { grid-column: 1; }
+.post__nav-next { grid-column: 2; text-align: right; }
+.post__nav .post__nav-all { grid-column: 1 / -1; justify-self: center; }
 
 /* 7. Archive / index */
 .archive { margin: 2rem 0 3rem; }
 .archive__year {
   font-size: 24px;
   color: var(--link);
-  margin: 2.5rem 0 0.8rem;
+  margin: 0 0 0.7rem;
+  scroll-margin-top: 1rem;
   letter-spacing: 0.1em;
 }
 .archive__year::before { content: '== '; color: var(--fg); }
 .archive__year::after  { content: ' =='; color: var(--fg); }
-.archive__year:first-child { margin-top: 1rem; }
+.archive__group { margin-top: 1.8rem; }
 .archive__list { padding: 0; }
 .archive__entry {
   display: grid;
   grid-template-columns: 4rem minmax(0, 1fr) max-content;
-  gap: 1rem;
-  padding: 0.5rem 0.5rem;
+  gap: 0 1rem;
+  padding: 0 0.5rem;
   border-bottom: 1px dashed var(--rule);
-  align-items: baseline;
+  align-items: center;
   transition: none;
 }
-.archive__entry:hover {
+.archive__entry:hover,
+.archive__entry:focus-within {
   background: var(--link);
   color: var(--bg);
   border-bottom-color: var(--link);
 }
 .archive__entry:hover .archive__date,
 .archive__entry:hover .archive__title,
-.archive__entry:hover .archive__tag { color: var(--bg); }
-.archive__entry:hover .archive__tag {
+.archive__entry:hover .archive__tag,
+.archive__entry:focus-within .archive__date,
+.archive__entry:focus-within .archive__title,
+.archive__entry:focus-within .archive__tag { color: var(--bg); }
+.archive__entry:hover .archive__tag,
+.archive__entry:focus-within .archive__tag {
   background: var(--bg);
   color: var(--link);
 }
@@ -362,6 +395,12 @@ hr, hr.rule, hr.soften {
   display: contents;
 }
 .archive__title {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  min-height: 44px;
+  padding: 0.5rem 0;
+  overflow-wrap: anywhere;
   color: var(--fg);
   text-decoration: none;
   line-height: 1.5;
@@ -369,6 +408,10 @@ hr, hr.rule, hr.soften {
 }
 .archive__title:hover,
 .archive__title:focus-visible { text-decoration: underline; }
+.archive__title:focus-visible, .archive__tag:focus-visible {
+  outline-color: var(--bg);
+  outline-offset: -2px;
+}
 .archive__tags {
   display: inline-flex;
   flex-wrap: wrap;
@@ -377,7 +420,9 @@ hr, hr.rule, hr.soften {
   justify-content: flex-end;
 }
 .archive__tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--stack);
   font-size: 16px;
   color: var(--link);
@@ -405,7 +450,9 @@ hr, hr.rule, hr.soften {
   background: var(--panel);
   color: var(--panel-fg);
   box-shadow: var(--shadow-raised);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 .archive__more a:hover,
 .archive__more a:focus-visible {
@@ -435,7 +482,9 @@ hr, hr.rule, hr.soften {
   background: var(--panel);
   color: var(--panel-fg);
   box-shadow: var(--shadow-raised);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 .pagination a:hover,
 .pagination a:focus-visible {
@@ -458,33 +507,78 @@ hr, hr.rule, hr.soften {
 
 /* Tag cloud (for /tags/ page) */
 .tag-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.5rem;
   margin: 1.5rem 0 3rem;
 }
 .tag-cloud__item {
-  display: inline-flex;
-  align-items: baseline;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-height: 48px;
+  border-bottom: 1px dashed var(--rule);
   color: var(--link);
   text-decoration: none;
   font-size: 16px;
-  padding: 0 0.4rem;
+  padding: 0.5rem;
   line-height: 1.4;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
-.tag-cloud__item::before { content: '#'; opacity: 0.7; }
 .tag-cloud__item:hover,
 .tag-cloud__item:focus-visible {
   background: var(--link);
   color: var(--bg);
 }
-.tag-cloud__item:hover::before,
-.tag-cloud__item:focus-visible::before { color: var(--bg); opacity: 1; }
 .tag-cloud__item:hover .tag-cloud__count,
 .tag-cloud__item:focus-visible .tag-cloud__count { color: var(--bg); }
-.tag-cloud__count { color: var(--link); }
+.tag-cloud__count { color: var(--fg-dim); white-space: nowrap; }
 .tag-section { margin: 3rem 0; }
+
+/* Archive controls — text terminal forms */
+.title-search {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+.title-search label { white-space: nowrap; color: var(--fg-dim); }
+.title-search input {
+  min-width: 0;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--fg-dim);
+  background: var(--bg-deep);
+  color: var(--fg);
+}
+.title-search input::placeholder { color: var(--fg-dim); opacity: 1; }
+.title-search button {
+  min-height: 44px;
+  padding: 0.3rem 0.8rem;
+  border: 0;
+  box-shadow: var(--shadow-raised);
+  background: var(--panel);
+  color: var(--panel-fg);
+  white-space: nowrap;
+}
+.title-search button:hover, .title-search button:focus-visible {
+  background: var(--link);
+  box-shadow: var(--shadow-sunken);
+}
+.year-nav { display: flex; flex-wrap: wrap; gap: 0 0.4rem; }
+.year-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.35rem;
+  color: var(--link);
+  text-decoration: none;
+}
+.year-nav a:hover, .year-nav a:focus-visible { background: var(--link); color: var(--bg); }
+.archive__status { margin: 1rem 0; color: var(--fg-dim); overflow-wrap: anywhere; }
+.archive__empty { margin: 2rem 0; }
 
 /* 11. Comments (Giscus wrapper from theme) */
 .row-fluid {
@@ -515,7 +609,9 @@ main > * {
 
 /* 13. Responsive */
 @media (max-width: 720px) {
-  .site-head { padding: 2rem 0 1rem; }
+  .site-head { padding: 1.6rem 0 0.5rem; }
+  .archive { margin-top: 1.5rem; }
+  .archive__group { margin-top: 1.4rem; }
   .site-head__title,
   .post__title {
     font-size: 24px;
@@ -524,8 +620,8 @@ main > * {
   }
   .archive__entry {
     grid-template-columns: 3.4rem minmax(0, 1fr);
-    gap: 0.45rem 0.7rem;
-    padding: 0.45rem;
+    gap: 0 0.7rem;
+    padding: 0 0.45rem;
   }
   .archive__tags {
     grid-column: 2;
@@ -533,9 +629,6 @@ main > * {
   }
   .archive__year { font-size: 20px; }
   .post__body h2 { font-size: 20px; }
-  .nav { gap: 0.2rem 0.4rem; }
-  .post__nav { flex-direction: column; gap: 0.7rem; }
-  .post__nav span:last-child { text-align: left; }
-  .post__nav span:last-child::after { content: ''; }
-  .post__nav span:first-child::before { content: '« '; }
+  .post__nav { grid-template-columns: minmax(0, 1fr); gap: 0.8rem; }
+  .post__nav-next { grid-column: 1; text-align: left; }
 }

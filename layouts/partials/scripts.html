@@ -1,3 +1,6 @@
+{{ if and .IsSection (eq .Section "post") }}
+<script src="{{ "js/archive.js" | relURL }}" defer></script>
+{{ end }}
 {{ range .Site.Params.customCSS -}}
 <link rel="stylesheet" href="{{ . | relURL }}">
 {{- end }}

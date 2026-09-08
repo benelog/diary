@@ -1,5 +1,10 @@
-<nav class="nav">
+<nav class="nav" aria-label="주 메뉴">
+  <div class="nav__inner wrap">
+  {{ $page := . }}
   {{ range .Site.Menus.main }}
-    <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ $current := eq $page.RelPermalink (.URL | relURL) }}
+    {{ $within := or (and (eq .Identifier "posts") (eq $page.Section "post")) (and (eq .Identifier "tags") (eq $page.Data.Plural "tags")) }}
+    <a href="{{ .URL | relURL }}"{{ if $current }} aria-current="page"{{ else if $within }} aria-current="true"{{ end }}>{{ .Name }}</a>
   {{ end }}
+  </div>
 </nav>

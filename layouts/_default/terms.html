@@ -1,13 +1,15 @@
 {{ define "main" }}
 <header class="list-head">
-  <h1 class="post__title">{{ .Title }}</h1>
+  <h1 class="post__title">{{ if eq .Data.Plural "tags" }}태그별 글{{ else }}{{ .Title }}{{ end }}</h1>
   {{ with .Content }}<div>{{ . }}</div>{{ end }}
 </header>
-<div class="tag-cloud">
+<ul class="tag-cloud">
   {{ range .Data.Terms.ByCount }}
+    <li>
     <a href="{{ .Page.Permalink }}" class="tag-cloud__item">
-      {{ .Page.Title }} <span class="tag-cloud__count">({{ .Count }})</span>
+      <span>{{ .Page.Title }}</span><span class="tag-cloud__count">{{ .Count }}편</span>
     </a>
+    </li>
   {{ end }}
-</div>
+</ul>
 {{ end }}
