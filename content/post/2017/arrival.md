@@ -1,5 +1,5 @@
 ---
-title: "컨텍트"
+title: "컨택트"
 description: "감상평"
 date: 2017-02-08
 categories: ["2017년"]

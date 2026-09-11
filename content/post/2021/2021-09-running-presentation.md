@@ -1,6 +1,6 @@
 ---
 title: "코로나 시대의 취미, 달리기"
-description: "2021년 12일 발표 자료"
+description: "2021년 9월 12일 발표 자료"
 date: 2021-09-12
 categories: ["2021년"]
 tags: ["달리기"]
@@ -20,7 +20,7 @@ tags: ["달리기"]
 ## 왜 달리기인가?
 
 - 단순함
-  - 배워할 것이 적음.
+  - 배워야 할 것이 적음.
   - 생각없이 하기에 좋음
 - 측정& 결과 가시화가 쉬움
   - 앱이 알아서 측정해줌
@@ -42,7 +42,7 @@ print 3
   - 과거에 돈도 쓰고 운동도 안한 경험 (헬스, 복싱)
 - 실용성
   - 평생 맨다리로 이동은 할 것이므로
-- 위로 요소로 인해 지속가능성이 가장 높다고 예상
+- 위의 요소로 인해 지속가능성이 가장 높다고 예상
 
 
 ----
@@ -69,7 +69,7 @@ print 3
 
 
 - 인생 처음으로 반년이상의 꾸준한 자발적인 운동을 하고 있음.
-- 체지방율 3-4%, 몸무게 4kg정도 줄어듬
+- 체지방률 3-4%, 몸무게 4kg정도 줄어듦
   - 이제 체중 감량이 목표는 아님. 그냥 잘 달리고 싶어졌음.
 
 ----
@@ -81,14 +81,14 @@ print 3
   - 참고
     -  스스로 큰 의미부여하고 자부심을 가지신 분.
       - ![kim03.png](https://user-images.githubusercontent.com/910151/184516795-eb852bb7-3ffe-4339-93ee-4cb262f97559.png)
-    - 주변에서 의미 부여를 해주기도..(영화 프레스토 검프)
+    - 주변에서 의미 부여를 해주기도..(영화 포레스트 검프)
       -  ![gump.png](https://user-images.githubusercontent.com/910151/184516800-de6db0ed-e9ae-4589-b270-b1bbe637f9e2.png)
 - 이동 거리에 대한 새로운 느낌
   - 주말에 5km안 쪽은 차 안타고 다녀도 되겠다고 느낌.
   - 반포->여의도 국회의사당 10km
     - 뛰어가보니 55분
       - ![10k-run](https://user-images.githubusercontent.com/910151/184516822-0e12f55c-aa89-4ac7-9a92-fbf709e6b2c3.png)
-    - 돌아올 떄 택시타니 12분, 14,900원
+    - 돌아올 때 택시타니 12분, 14,900원
 - 지루함에 대한 인내심
   - 책 읽을때 도움이 됨
 - 목표, 동기유발에 대해서 생각해보는 기회
@@ -112,7 +112,7 @@ print 3
 - 이상적인 케이던스(1분당 발걸음 수)는 180
   - 촘촘한 걸음으로 달리면 충격이 적다고 함.
 - 발바닥 물집 주의 : 5km가 넘어가면 발바닥의 사소한 자극도 물집이 될 수 있음.
-  - 양말의 약간 구겨김, 조금 튀어나온 발 각질
+  - 양말의 약간 구겨짐, 조금 튀어나온 발 각질
   - 러닝화는 잠깐이라도 구겨신지 않기
     - 발뒤쪽 접촉부분이 안쪽으로 접혀서 길이 들면 물집을 유발함
 
@@ -135,7 +135,7 @@ print 3
 ### 비오는 날 대비
 - [비옷](https://smartstore.naver.com/hmbag/products/4978832239)
   - ![raincoat](https://user-images.githubusercontent.com/910151/184516857-393fc582-c021-42e6-9b28-60cbb8b5563c.png)
-- [신발덥개](https://smartstore.naver.com/diary1000/products/4505644988)
+- [신발덮개](https://smartstore.naver.com/diary1000/products/4505644988)
   - ![shoe cover](https://user-images.githubusercontent.com/910151/184516860-807931cc-4a4d-4693-aab4-e10cfe708aec.png)
 
 ----
@@ -154,7 +154,7 @@ print 3
     -  Garmin 45와 스마트폰의 GPS로 동시 측정 실험결과 스마트폰이 더 정확한 느낌
     - [' Every Second Recording'](https://support.garmin.com/en-US/?faq=xQvHXbfaT27Zr4hxZDvjv5)기능이 없음.
     - 위치가 띄엄띄엄 기록되다보니 곡선으로 달린거리가 직선처럼 나와서 달린 거리에서 손해가 있음.
-      - 한강 같은 직전 주로에서는 거의 차이가 없긴했음
+      - 한강 같은 직선 주로에서는 거의 차이가 없긴했음
 
 ---
 
@@ -190,7 +190,7 @@ print 3
 
 ### 목표 선언 & 달성 공개
 
-![instgram 2021-07](https://user-images.githubusercontent.com/910151/184516957-93fa7462-d9ae-4152-8a7a-b916e3c1785a.png)
+![instagram 2021-07](https://user-images.githubusercontent.com/910151/184516957-93fa7462-d9ae-4152-8a7a-b916e3c1785a.png)
 
 ---
 
@@ -218,7 +218,7 @@ print 3
 - '왜 달리는가?'에 대한 고민은 계속 중
   - 마라톤 대회 나갈것도 아닌데 계속 달려야하나?
   - 잘 해야지 재미있는데,  동네에도 잘 달리는 아저씨/할아버지들은 넘쳐남.
-- '자신'에게 그 목표가 어떤 의미인지가 가장 중요하드는 것을 깨닳음
+- '자신'에게 그 목표가 어떤 의미인지가 가장 중요하다는 것을 깨달음
   - 달리면서 들었던 솔비의 강연 : [나쁜 습관은 아픔을 남기고 좋은 습관은 작품을 남긴다.](https://www.youtube.com/watch?v=Fv1EYJZtlTg)
     - 우울증을 이겨내는 과정에서 그림이 그에게 어떤 의미였는지..
 - 지금의 또다른 목표 : 3.2km(2마일)의 인생 최고 기록(군대시절, 13분50초) 깨기
@@ -232,10 +232,10 @@ print 3
 ## 도움이 되는 정보 채널
 
 ### 달리기
-- [Maranic TV](ttps://www.youtube.com/channel/UCx_2bXULZciQY76UoDhIntA) : 달리기 예찬. 보고 있으면 뛰고 싶어짐
+- [Maranic TV](https://www.youtube.com/channel/UCx_2bXULZciQY76UoDhIntA) : 달리기 예찬. 보고 있으면 뛰고 싶어짐
 - [민티런](https://www.youtube.com/channel/UCmafuqR6Iya-c0CPMOgApYA) : 초보에게 유용한 팁이 많음.
 - [마라토니아](https://www.youtube.com/channel/UCJ6Rc1WZXhl_zU_RIaTlQag) : 전문적인 훈련법
-  - 저도 몇일전부터 보기 시작
+  - 저도 며칠 전부터 보기 시작
 - [운동화 신은 뇌](http://www.yes24.com/Product/Goods/3516788?OzSrank=1) : 달리기가 두뇌활동에 많은 도움이 된다는 연구결과
   - ![](http://image.yes24.com/goods/3516788/XL)
 
